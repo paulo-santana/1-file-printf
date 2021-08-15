@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -25,3 +25,8 @@ jobs:
       run: make fclean
     - name: re
       run: make re
+    - name: checkout tripouille
+      run: git clone https://github.com/Tripouille/printfTester
+    - name: run
+      run: make -C printfTester m
+      
