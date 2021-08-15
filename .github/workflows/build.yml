@@ -15,8 +15,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: make
-    - name: remake
-      run: make | grep -q "Nothing to be done for 'all'."
     - name: clean
       run: make clean
     - name: make
