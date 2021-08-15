@@ -6,6 +6,7 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
 
 %.o: %.c
 	clang -Wall -Werror -Wextra -c $< -o $@
