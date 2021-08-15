@@ -10,4 +10,10 @@ $(NAME): $(OBJ)
 %.o: %.c
 	clang -Wall -Werror -Wextra -c $< -o $@
 
+clean:
+	rm -f $(OBJ)
 
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
